@@ -1,4 +1,4 @@
-# 第四章 TypeScript语句
+# 第四章 `TypeScript`语句
 
 ## 一、条件语句
 
