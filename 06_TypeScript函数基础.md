@@ -88,3 +88,10 @@ getSum(nums2)
    - 使用变量接受函数返回值 `let result: number = fn()     console.log(result * 10)`
    - 直接使用函数调用的结果  `console.log(fn * 10)`
 
+### 3、return的说明
+
+1. 将函数内部的计算结果返回
+2. 终止函数代码执行，即：return后边的代码不会执行
+3. return只能在函数体中使用，否则会报错
+4. return可以单独使用（后面可以不跟内容），用来可以终止函数的执行
+   - 注意：如果函数没有返回值，默认返回值为void
