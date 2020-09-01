@@ -50,4 +50,41 @@ let person = {
 }
 ```
 
-注意：键值对中的值是类型。多个键值对之间是哟个分号分隔，并且分号可以省略
+注意：键值对中的值是类型。多个键值对之间是哟个分号分隔，并且分号可以省略。
+
+### 2、对象方法的类型注解
+
+鼠标放在变量名上，`VSCode` 就会给出该变量的类型注解
+
+```typescript
+let person = {
+	sayHi: () => void
+	sing: (name, string) => void
+	sum: (num1: number, num2: number) => number
+}
+
+let p1: {
+    sayHi: () => void
+}
+p1 = {
+    sayHi: function () {console.log('没有返回值')}
+}
+
+let p2: {
+   sing: (name, string) => void
+}
+p2 = {
+    sing: function (name: string) {console.log('没有返回值')}
+}
+
+let p3: {
+    sum: (num1: number, num2: number) => number   
+}
+p3 = {
+    sum: function (num1: number, num2: number) {
+    	return num1 + num2    
+    }
+}
+```
+
+箭头左边的小括号中的内容，表示方法的参数类型
