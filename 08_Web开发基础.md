@@ -27,6 +27,12 @@ web开发涵盖内容：HTML 、CSS、JavaScript
 
 - style属性：在HTML标签内 `<p style='color:red;font-size:18px'>哈哈</p>`
 - style标签：在head标签中，创建style标签 `<style> .box { color: red; }  </style>`
+- css文件：创建.css文件，将样式放在该文件中，然后在head中通过link标签引入该文件。`<link ref="stylesheet" href="./index.css" />`
+
+### 四、浏览器中使用JavaScript
+
+1. script标签：在body标签的最后面创建
+2. 独立js文件：创建index.js文件，在body标签的最后面，通过script标签引入`<script src="./index.js"></script>`
 
 ## 第二节 浏览器中运行TS
 
