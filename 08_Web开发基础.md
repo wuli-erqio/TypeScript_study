@@ -23,6 +23,11 @@ web开发涵盖内容：HTML 、CSS、JavaScript
 
 层叠样式表
 
+三种使用方式
+
+- style属性：在HTML标签内 `<p style='color:red;font-size:18px'>哈哈</p>`
+- style标签：在head标签中，创建style标签 `<style> .box { color: red; }  </style>`
+
 ## 第二节 浏览器中运行TS
 
 ## 第三节 DOM操作
