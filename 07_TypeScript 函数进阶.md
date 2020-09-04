@@ -91,4 +91,116 @@ p3 = {
 
 ### 3、接口的使用
 
-p94
+直接在对象名称后便写类型注解的坏处：
+
+- 代码结构不简洁
+- 无法复用类型注解
+
+接口：为对象的类型注解命名，并为你的代码建立契约来约束对象的结构
+
+语法：interface `Iuser` {
+
+​				name: string
+
+​				age: number
+
+​			}
+
+interface表示接口，接口名称约定以   **I**   开头
+
+## 四、取值和存值
+
+### 1、取值
+
+取值，即：拿到对象中的属性或方法并使用
+
+获取对象中的属性，称为：访问属性
+
+获取对象中的方法并调用，称为：调用方法
+
+- 访问属性  let jay = { name: '张三'， height: 175, sing: function { `console.log('111')` }  }
+- 通过点语法（.）就可以访问对象中的属性。` jay.name`
+- 访问对象中的方法。` jay.sing()`
+
+### 2、存值
+
+存值，即修改（设置）对象中属性的值
+
+先通过点语法获取到name的属性，然后再将新值给改属性
+
+`jay.name = '李四'`
+
+## 五、内置对象
+
+### 1、概述
+
+两种来源
+
+- 自己创建
+- 其他人创建（编程语言自带或第三方）
+
+内置对象，是TS自带的一些基础对象，提供了TS开发时所需的基础或必要的能力
+
+已经用过的内置对象： 数组
+
+### 2、查文档
+
+`MDN` `W3school`
+
+### 3、数组对象
+
+数组是TS中最常用、最重要的内置对象之一
+
+数组的常用操作：添加、删除、遍历、过滤
+
+重点: 属性：length 方法：push、`forEach`、some
+
+- length属性：获取数组的长度
+
+```typescript
+let arr:number[] = [11, 2, 44]
+console.log(arr.length)
+```
+
+- push方法：将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+
+```typescript
+let arr:number[] = [11, 2, 44]
+let arrNew:number = arr.push(33) // 4
+arr.push(55, 66, 77) // [11,2,44,33,55,66,77]
+```
+
+- `forEach`方法：遍历数组
+
+```typescript
+let names:string[] = ['张三', '李四', '王五']
+names.forEach(function (item, index)) {
+	console.log('索引为',index, '元素为', item)
+}
+```
+
+注意：`forEach`方法的参数是一个函数，这种函数也称为回调函数
+
+- some 方法：遍历数组，查找是否有一个满足条件的元素（如果有，就可以停止循环）
+- 特点：根据回调函数的返回值，决定是否停止循环。如果是true，就停止；false，继续循环。
+
+```typescript
+let has:boolean = nums: number[] = [1,33,1,4,8]
+nums.some(function (num) {
+	console.log(num) // 1, 33
+	if(num>10) {
+		return true
+	}
+	return false
+})
+console.log(has) // true
+```
+
+## TS的类型推论
+
+由于类型推论的存在，有些地方，类型注解可以省略不写
+
+发生类型推论的两种常见场景：
+
+- 声明变量并初始化时
+- 决定函数返回值时
